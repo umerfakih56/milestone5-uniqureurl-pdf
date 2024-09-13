@@ -1,0 +1,89 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: rgb(245, 251, 253);
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(17, 16, 16);
+    color: aliceblue;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: rgb(154, 236, 236);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+fieldset {
+    border: 2px solid #3498bd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+}
+
+legend {
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+input,
+textarea {
+    width: calc(100% - 1px);
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #3498bd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(46, 217, 239);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #a3c4c5;
+}
+
+#resumeOutput {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #3498bd;
+    border-radius: 8px;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.editing-input {
+    border: 2px solid #3498bd;
+    padding: 6px;
+    font-size: 16px;
+    background-color: #eef9fb;
+}
+
+.share-section {
+    text-align: center;
+    margin-top: 20px;
+}
