@@ -1,89 +1,213 @@
+/* General Styles */
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: rgb(245, 251, 253);
+    background-color: #f4f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
 }
 
 h1 {
-    text-align: center;
-    background-color: rgb(17, 16, 16);
-    color: aliceblue;
+    font-size: 2.5rem;
+    color: #2c3e50;
 }
 
-form {
-    max-width: 600px;
-    margin: auto;
-    background-color: rgb(154, 236, 236);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+h2 {
+    font-size: 1.8rem;
+    color: #3498db;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Card Design */
+.card {
+    background: white;
+    margin: 20px auto;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
 }
 
 fieldset {
-    border: 2px solid #3498bd;
+    border: 2px solid #3498db;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 20px;
-    background-color: aliceblue;
 }
 
 legend {
     font-weight: bold;
-    text-align: left;
-    color: black;
+    color: #2c3e50;
+    padding: 0 5px;
 }
 
 label {
     display: block;
     margin-top: 10px;
-    color: #2c3e50;
+    color: #555;
+    font-weight: bold;
 }
 
-input,
-textarea {
-    width: calc(100% - 1px);
-    padding: 8px;
-    margin-top: 4px;
-    border: 1px solid #3498bd;
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
 button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(46, 217, 239);
-    color: black;
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
     border: none;
     border-radius: 4px;
-    margin-top: 10px;
-    font-size: 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #a3c4c5;
+    background: #2c81ba;
+    transform: translateY(-2px);
 }
 
-#resumeOutput {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border: 2px solid #3498bd;
-    border-radius: 8px;
-    background-color: aliceblue;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+button:active {
+    transform: translateY(1px);
 }
 
-.editing-input {
-    border: 2px solid #3498bd;
-    padding: 6px;
-    font-size: 16px;
-    background-color: #eef9fb;
+.btn-primary {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    background: #2ecc71;
 }
 
-.share-section {
+.btn-primary:hover {
+    background: #27ae60;
+}
+
+.btn-secondary {
+    margin-top: 10px;
+    background: #9b59b6;
+}
+
+.btn-secondary:hover {
+    background: #8e44ad;
+}
+
+/* Link Output */
+.link-output {
+    margin: 20px 0;
+}
+
+.link-output label {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.link-output input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    color: #333;
+    cursor: not-allowed;
+}
+
+/* Social Buttons */
+.social-buttons {
+    margin-top: 15px;
     text-align: center;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+}
+
+.email-btn {
+    background: #3498db;
+}
+
+.twitter-btn {
+    background: #1da1f2;
+}
+
+/* Resume Output Section */
+#resumeOutput {
+    padding: 20px;
+    border: 2px solid #2ecc71;
+    border-radius: 8px;
+    background-color: #ecf9f1;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #2c3e50;
+    color: white;
+    font-size: 0.9rem;
     margin-top: 20px;
 }
+
