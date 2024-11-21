@@ -1,68 +1,79 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Generator</title>
+    <title>Professional Resume Generator</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
-    <h1>Resume Generator</h1>
+    <header>
+        <h1>🌟 Professional Resume Generator</h1>
+        <p>Effortlessly create, download, and share your personalized resume!</p>
+    </header>
 
-    <form id="resumeForm">
-        <!-- Form fields for resume -->
-        <fieldset>
-            <legend>Personal Information</legend>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+    <main>
+        <form id="resumeForm" class="card">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required>
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required><br>
-        </fieldset>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+            </fieldset>
 
-        <fieldset>
-            <legend>Education</legend>
-            <label for="education">Education:</label>
-            <textarea id="education" name="education" rows="4" required></textarea><br>
-        </fieldset>
+            <fieldset>
+                <legend>Education</legend>
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" rows="4" placeholder="Your academic qualifications..." required></textarea>
+            </fieldset>
 
-        <fieldset>
-            <legend>Experience</legend>
-            <label for="experience">Experience:</label>
-            <textarea id="experience" name="experience" rows="4" required></textarea><br>
-        </fieldset>
+            <fieldset>
+                <legend>Experience</legend>
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="experience" rows="4" placeholder="Your professional experience..." required></textarea>
+            </fieldset>
 
-        <fieldset>
-            <legend>Skills</legend>
-            <label for="skills">Skills:</label>
-            <textarea id="skills" name="skills" rows="4" required></textarea><br>
-        </fieldset>
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills" rows="4" placeholder="Your key skills..." required></textarea>
+            </fieldset>
 
-        <button type="submit">Generate Resume</button>
-    </form>
+            <button type="submit" class="btn-primary">Generate Resume</button>
+        </form>
 
-    <!-- Shareable Link and PDF Section -->
-    <div class="share-section">
-        <button type="button" id="generateLink">Generate Shareable Link</button>
-        <button type="button" id="downloadPDF">Download PDF</button>
-        <br>
-        <label for="shareableLink">Shareable Link:</label>
-        <input type="text" id="shareableLink" readonly>
-        <br><br>
+        <section class="share-section card">
+            <h2>Share and Download</h2>
+            <button type="button" id="generateLink" class="btn-secondary">Generate Shareable Link</button>
+            <button type="button" id="downloadPDF" class="btn-secondary">Download as PDF</button>
 
-        <!-- Social Sharing Buttons -->
-        <a id="emailShare" href="#" target="_blank">Share via Email</a> |
-        <a id="twitterShare" href="#" target="_blank">Share via Twitter</a>
-    </div>
+            <div class="link-output">
+                <label for="shareableLink">Shareable Link:</label>
+                <input type="text" id="shareableLink" readonly placeholder="Your link will appear here">
+            </div>
 
-    <div id="resumeOutput"></div>
+            <div class="social-buttons">
+                <a id="emailShare" href="#" target="_blank" class="social-btn email-btn">📧 Share via Email</a>
+                <a id="twitterShare" href="#" target="_blank" class="social-btn twitter-btn">🐦 Share via Twitter</a>
+            </div>
+        </section>
+
+        <div id="resumeOutput" class="card">
+            <!-- Resume preview will be generated dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Resume Generator by Umer Fakih. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
